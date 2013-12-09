@@ -64,6 +64,7 @@ public class LizebinLinkedList<E> implements DefinitionList<E> {
 			oldNode.setNodeValue(null);
 			oldNode.setNext(null);
 			oldNode = null;
+			size--;
 			return oldNodeValue;
 		}
 		int i = 0;
@@ -82,8 +83,8 @@ public class LizebinLinkedList<E> implements DefinitionList<E> {
 	
 	public int size() {
 		Node<E> next = header;
-		int size = 1;
-		while(next.getNext() != null) {
+		int size = 0;
+		while(next != null) {
 			next = next.getNext();
 			size++;
 		}
