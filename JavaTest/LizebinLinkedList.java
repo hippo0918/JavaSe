@@ -6,7 +6,7 @@ public class LizebinLinkedList<E> implements DefinitionList<E> {
 	private Node<E> header;
 	
 	public LizebinLinkedList() {
-		header = new Node<E>();
+		
 	}
 	public boolean isEmpty() {
 		if(this.size() == 0) {
@@ -38,6 +38,7 @@ public class LizebinLinkedList<E> implements DefinitionList<E> {
 		Node<E> next = null;
 		checkIndex(index);
 		if(index == 0) {
+			header = new Node<E>();
 			header.setNodeValue(object);
 			return;
 		}
@@ -64,7 +65,6 @@ public class LizebinLinkedList<E> implements DefinitionList<E> {
 			oldNode.setNodeValue(null);
 			oldNode.setNext(null);
 			oldNode = null;
-			size--;
 			return oldNodeValue;
 		}
 		int i = 0;

@@ -20,10 +20,10 @@ public class Test {
 		for(int i=0; i<list.size(); i++) {
 			System.out.println(list.get(i));
 		}
-		String s1 = list.remove(0);
-		String s = list.remove(1);
+		String s = list.remove(2);
+		//String s1 = list.remove(1);
 		System.out.println("remove = " + s);
-		System.out.println("remove1 = " + s1);
+		//System.out.println("remove1 = " + s1);
 		System.out.println("size = " + list.size());
 		//list.clear(); 
 		for(int i=0; i<list.size(); i++) {
